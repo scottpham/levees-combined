@@ -58,7 +58,6 @@ function render(width) {
 
     //this is called on reset
     function reset(){
-        console.log("reset fired")
         bounds = path.bounds(collection);
 
         var topLeft = bounds[0],
@@ -103,7 +102,7 @@ function render(width) {
     });
 
     //collection > features > properties
-    console.log(collection.features);
+
 
 
     function buildLevees(){
@@ -182,15 +181,15 @@ function render(width) {
                 .attr("y", "2")
                 .style("opacity", 0.9);
 
-            var newGroup = legend.append("g")
-                .attr("transform", "translate(60, 13)");
+            var newGroup = legend.append("g");
 
             newGroup.append("svg:foreignObject")
-                .attr("width", 20)
-                .attr("height", 20)
                 .append("xhtml:span")
                 .attr("class", "glyphicon glyphicon-resize-full")
                 .style("font-size", 50)
+                .on("click", toggleSize);
+
+            d3.selectAll(".glyphicon")
                 .on("click", toggleSize);
         }//end function collapse
 

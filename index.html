@@ -165,8 +165,9 @@
       /*leaflet style*/
 
       #map {
-            width: 100%;
+            width: auto;
             height: 400px;
+            padding-right: 105px;
       }
 
       svg {
@@ -184,7 +185,11 @@
         }
 
         .glyphicon {
-            font-size: 30px;
+            font-size: 20px;
+            position: relative;
+            left: 65px;
+            top: 16px;
+            opacity: .7;
 
         }
     
@@ -230,6 +235,11 @@
         right: 1em;
     }
 
+    .col-ms-4 {
+        padding: 10px;
+
+    }
+
         
         </style>
 </head>
@@ -242,7 +252,7 @@
         </div>
 
         <div class="col-ms-4">
-            <p class="text-justify">In 2011 the state Department of Water Resources surveyed the non-urban levee system statewide. 60% of the levees in the study were given a hazard status of "high"</p>
+            <p>In 2011 the state Department of Water Resources surveyed the non-urban levee system statewide. 56.4% of the levees in the study were given a hazard status of "high"</p>
         </div>
 
         <div class="col-ms-5 col-xs-8">
@@ -257,7 +267,7 @@
     
     <div class="row-fluid">
         <div class="col-xs-12">
-            <p>These are the locations of the non-urban levees in Northern California. Much of the Bay's drinking water is piped in from sources east of this levee systems.</p>
+            <p>Much of the Bay's drinking water is piped in from sources east of this levee systems.</p>
         </div>
 
         <div class="col-xs-12">
@@ -266,12 +276,9 @@
 
         <div class="col-xs-12 footnotes">
             <h4>Notes: Some non state-controlled levees were included in this study.</h4>
-        </p>
-
-        <div class="footer col-xs-12">
             <p>Source: Central Valley Flood Planning Office</p>
             <p>Credit: <a href="http://www.twitter.com/scottpham">Scott Pham</a>/NBC Bay Area</p>
-        </p>
+        </div>
     </div>
 
     <!-- load data before graphic-->

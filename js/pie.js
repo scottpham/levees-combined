@@ -3,22 +3,22 @@
 
     var data = [
         {
-            value: 69,
+            value: 89,
             color: "#0961AD",
             label: "Low"
         },
         {
-            value: 352,
+            value: 399,
             color: "#08965D",
             label: "Moderate"
         },
         {
-            value: 719,
+            value: 866,
             color: "#BF0800",
             label: "High"
         },
         {
-            value: 92,
+            value: 182,
             color: "#C2CC14",
             label: "Lacking Sufficient Data"
         }
@@ -26,9 +26,10 @@
 
     //declare chart and modify options
      var myPie = new Chart(ctx).Pie(data, {
+        animationEasing: "easeOutQuart",
         maintainAspectRatio: true,
         responsive: true,
-        tooltipTemplate: "<%= label %>: <%= Math.round((value /1200) * 100) + '%' %>",
+        tooltipTemplate: "<%= label %>: <%= Math.round((value /1535) * 100) + '%' %>",
        legendTemplate : "<ul class=\"legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
     });
 
